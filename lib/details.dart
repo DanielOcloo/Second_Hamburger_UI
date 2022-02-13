@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'cart.dart';
 
 class MyDetailsPage extends StatefulWidget {
   const MyDetailsPage({Key? key, required this.title}) : super(key: key);
@@ -514,14 +515,24 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                 Container(
                   width: 250,
                   child: Align(
-                    child: Text(
-                      'Add to cart',
-                      style: TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white.withOpacity(0.8),
-                      ),
-                    ),
+                    child: TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  const MyCartPage(title: 'details'),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          'Add to cart',
+                          style: TextStyle(
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white.withOpacity(0.8),
+                          ),
+                        )),
                   ),
                   decoration: BoxDecoration(
                     color: Colors.black,

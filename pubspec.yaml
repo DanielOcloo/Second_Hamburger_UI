@@ -80,6 +80,15 @@ flutter:
     - images/onion.png
     - images/salad.png
     - images/blackdollar.png
+    - images/burger10.png 
+    - images/burger20.png
+    - images/undrawmapdark.png
+    - images/mapicon.png
+    - images/master.png
+    - images/paypal.png
+    - images/venmo.png
+    - images/visa.png
+    - images/deliveryman.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
