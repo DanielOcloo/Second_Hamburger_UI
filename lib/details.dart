@@ -11,13 +11,6 @@ class MyDetailsPage extends StatefulWidget {
 }
 
 class _MyDetailsPageState extends State<MyDetailsPage> {
-  var _isVisible = false;
-  void updateStatus() {
-    setState(() {
-      _isVisible = !_isVisible;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +31,6 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
-          //padding: const EdgeInsets.all(30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -88,11 +80,16 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                 height: 0,
               ),
               Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 30.0, vertical: 20),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 30.0,
+                  vertical: 20,
+                ),
                 child: Container(
                   height: 80,
                   width: 400,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                   child: Stack(
                     children: <Widget>[
                       Positioned(
@@ -120,12 +117,8 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                                     fontSize: 20,
                                   ),
                                 ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                const Icon(
-                                  Icons.add,
-                                ),
+                                const SizedBox(width: 10),
+                                const Icon(Icons.add),
                               ],
                             ),
                           ),
@@ -148,9 +141,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                               ),
                             ),
                           ),
-                          SizedBox(
-                            height: 10,
-                          ),
+                          SizedBox(height: 10),
                           Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -166,13 +157,6 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                       ),
                     ],
                   ),
-                  decoration: BoxDecoration(
-                    /*border: Border.all(
-                      color: Colors.black,
-                      width: 1,
-                    ),*/
-                    borderRadius: BorderRadius.circular(10),
-                  ),
                 ),
               ),
               Padding(
@@ -186,9 +170,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 30,
-              ),
+              const SizedBox(height: 30),
               Padding(
                 padding: const EdgeInsets.only(left: 30),
                 child: SizedBox(
@@ -211,9 +193,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                                   width: 35,
                                 ),
                               ),
-                              const SizedBox(
-                                height: 12,
-                              ),
+                              const SizedBox(height: 12),
                               Align(
                                 child: Text(
                                   'Cheese',
@@ -240,9 +220,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                           ),
                         ),
                       ),
-                      const SizedBox(
-                        width: 20,
-                      ),
+                      const SizedBox(width: 20),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 35),
                         child: Container(
@@ -257,9 +235,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                                   width: 35,
                                 ),
                               ),
-                              const SizedBox(
-                                height: 12,
-                              ),
+                              const SizedBox(height: 12),
                               Align(
                                 child: Text(
                                   'Onion',
@@ -286,9 +262,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                           ),
                         ),
                       ),
-                      const SizedBox(
-                        width: 20,
-                      ),
+                      const SizedBox(width: 20),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 35),
                         child: Container(
@@ -303,9 +277,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                                   width: 35,
                                 ),
                               ),
-                              const SizedBox(
-                                height: 12,
-                              ),
+                              const SizedBox(height: 12),
                               Align(
                                 child: Text(
                                   'Meat',
@@ -332,9 +304,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                           ),
                         ),
                       ),
-                      const SizedBox(
-                        width: 20,
-                      ),
+                      const SizedBox(width: 20),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 35),
                         child: Container(
@@ -349,9 +319,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                                   width: 35,
                                 ),
                               ),
-                              const SizedBox(
-                                height: 12,
-                              ),
+                              const SizedBox(height: 12),
                               Align(
                                 child: Text(
                                   'Vegetable',
@@ -378,9 +346,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                           ),
                         ),
                       ),
-                      const SizedBox(
-                        width: 20,
-                      ),
+                      const SizedBox(width: 20),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 35),
                         child: Container(
@@ -395,9 +361,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                                   width: 35,
                                 ),
                               ),
-                              const SizedBox(
-                                height: 12,
-                              ),
+                              const SizedBox(height: 12),
                               Align(
                                 child: Text(
                                   'Shrimp',
@@ -443,35 +407,12 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: Text(
-                  'A cheese burger is a hamburger topped with',
+                  'A cheese burger is a hamburger topped with chesse. The manufactured cheese is cut into small pieces that are placed on the toppings',
                   style: TextStyle(
+                    height: 1.5,
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
                     color: Colors.black.withOpacity(0.2),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 10),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30),
-                child: Text(
-                  'chesse. The manufactured cheese is cut into',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                    color: Colors.black.withOpacity(0.1),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 10),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30),
-                child: Text(
-                  'small pieces that are placed on the toppings',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                    color: Colors.black.withOpacity(0.05),
                   ),
                 ),
               ),
@@ -482,8 +423,12 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
       bottomNavigationBar: Container(
         height: 100,
         width: 500,
-        padding:
-            const EdgeInsets.only(left: 30, right: 35, top: 25, bottom: 20),
+        padding: const EdgeInsets.only(
+          left: 30,
+          right: 35,
+          top: 25,
+          bottom: 20,
+        ),
         child: Stack(
           children: <Widget>[
             const Positioned(
